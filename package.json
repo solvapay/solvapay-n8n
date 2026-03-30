@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-solvapay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n community node for SolvaPay — payments, subscriptions, usage billing, and automation.",
   "keywords": [
     "n8n-community-node-package",
