@@ -14,7 +14,7 @@
   "author": { "name": "SolvaPay", "email": "support@solvapay.com" },
   "repository": {
     "type": "git",
-    "url": "https://github.com/solvapay/n8n-nodes-solvapay.git"
+    "url": "https://github.com/solvapay/solvapay-n8n.git"
   },
   "scripts": {
     "build": "n8n-node build",
