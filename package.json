@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-solvapay",
+  "version": "0.1.0",
+  "description": "n8n community node for SolvaPay — payments, subscriptions, usage billing, and automation.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n-nodes",
+    "solvapay",
+    "payments",
+    "billing",
+    "subscriptions"
+  ],
+  "license": "MIT",
+  "author": { "name": "SolvaPay", "email": "support@solvapay.com" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solvapay/n8n-nodes-solvapay.git"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease",
+    "format": "prettier nodes credentials --write",
+    "test": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "test:all": "jest"
+  },
+  "files": ["dist", "README.md", "LICENSE.md"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": ["dist/credentials/SolvaPayApi.credentials.js"],
+    "nodes": [
+      "dist/nodes/SolvaPay/SolvaPay.node.js",
+      "dist/nodes/SolvaPay/SolvaPayTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "dotenv": "^17.3.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": { "n8n-workflow": "*" }
+}
